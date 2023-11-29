@@ -1,0 +1,77 @@
+@mixin buttonCallback-normal {
+    display: flex;
+    padding: 15px 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background: var(--unnamed, linear-gradient(90deg, #FF7A00 0.2%, #FFB039 99.82%));
+    box-shadow: 0px 10px 20px 0px rgba(17, 17, 17, 0.10);
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.625rem, 0.575rem + 0.25vw, 0.875rem);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+@mixin buttonCallback-hover {
+    display: flex;
+    padding: 15px 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #DD6A00 0.2%, #F99806 99.82%);
+    box-shadow: 0px 10px 20px 0px rgba(255, 122, 0, 0.20), 0px 4px 20px 0px rgba(0, 0, 0, 0.10) inset;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.625rem, 0.575rem + 0.25vw, 0.875rem);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+@mixin buttonCallback-active {
+    display: flex;
+    padding: 15px 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #DD6A00 0.2%, #F99806 99.82%);
+    box-shadow: 0px 10px 20px 0px rgba(255, 122, 0, 0.20), 0px 7px 5px 0px rgba(0, 0, 0, 0.20) inset;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.625rem, 0.575rem + 0.25vw, 0.875rem);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+@mixin font__Regular-min {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.75rem, 0.7rem + 0.25vw, 1rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@mixin font__Regular {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.875rem, 0.75rem + 0.63vw, 1.5rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@mixin font__ExtraBold {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.25rem, 1rem + 1.25vw, 2.5rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

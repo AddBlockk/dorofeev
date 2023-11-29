@@ -1,0 +1,251 @@
+@import "../anyMixin/anyMixin";
+
+.backgroundImg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55vw;
+  height: 50.625rem;
+  background: #2b7af1;
+  z-index: 0;
+}
+
+@media (width < 1300px) {
+  .backgroundImg {
+    height: 35.625rem;
+  }
+}
+
+@media (width < 700px) {
+  .backgroundImg {
+    height: 25.625rem;
+  }
+}
+
+.backgroundOpacity-run {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(83, 83, 83, 0.48);
+  backdrop-filter: blur(2.5px);
+  height: 100vh;
+  width: 100vw;
+}
+
+.header__container {
+  max-width: 1700px;
+  padding: 0 25px;
+  margin: 0 auto;
+}
+
+@media (width < 1000px) {
+  .header__container {
+    max-width: 1700px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+
+.header__container-wrapper {
+  padding-top: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1vw;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+  justify-content: space-between;
+}
+
+.header__container-wrapper_contr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4vw;
+}
+
+.wrapper__logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper__menu-nav {
+  .wrapper__logo-burger {
+    display: none;
+  }
+}
+
+.wrapper__logo-burger {
+  display: none;
+  border: 0;
+  // background-color: #fff;
+  cursor: pointer;
+}
+
+.menu-nav_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2vw;
+  justify-content: center;
+  align-items: center;
+
+  .menu-item_link {
+    @include font__Regular-min();
+    color: #111;
+  }
+}
+
+.wrapper__callback {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper__callback-item {
+  a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 1vw;
+
+    .image__button {
+      border-radius: 50%;
+      width: clamp(1.875rem, 1.75rem + 0.63vw, 2.5rem);
+      height: clamp(1.875rem, 1.75rem + 0.63vw, 2.5rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0;
+      background-color: #fff;
+      cursor: pointer;
+      transform: scale(1);
+      transition: transform 1s;
+      object-fit: cover;
+      object-position: 50% 50%;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    .callback-item_text {
+      @include font__Regular-min();
+      color: #fff;
+    }
+  }
+}
+
+.wrapper__callback-but {
+  button {
+    @include buttonCallback-normal();
+  }
+  button:hover {
+    @include buttonCallback-hover();
+  }
+  button:active {
+    @include buttonCallback-active();
+  }
+}
+
+@media (width < 1100px) {
+  .wrapper__logo-burger {
+    display: block;
+  }
+  .wrapper__callback-but {
+    button {
+      padding: 10px 15px;
+    }
+    button:hover {
+      padding: 10px 15px;
+    }
+    button:active {
+      padding: 10px 15px;
+    }
+  }
+
+  .wrapper__menu-open {
+    transform: translateX(-10%) !important;
+  }
+
+  .wrapper__menu {
+    transform: translateX(-125%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #2b7af1;
+    width: 200px;
+    height: 100vh;
+
+    .wrapper__logo-burger {
+      display: block;
+    }
+
+    .wrapper__menu-nav {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 10vw;
+      padding: 4rem 50px 0px 30px;
+    }
+
+    .menu-nav_list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      gap: 2rem;
+
+      .wrapper__menu-item a {
+        @include font__Regular();
+        color: #fff;
+        position: relative;
+
+        &:before {
+          content: url(../../img/Vector\ 485.svg);
+          position: absolute;
+          bottom: -100%;
+          left: -10%;
+        }
+      }
+    }
+  }
+}
+
+@media (width < 900px) {
+  .wrapper__callback-item_first {
+    display: none;
+  }
+}
+
+@media (width < 500px) {
+  .wrapper__callback-but {
+    display: none;
+  }
+  .wrapper__callback-item {
+    display: block;
+  }
+  .wrapper__callback-item_first {
+    display: block;
+  }
+  .callback-item_text {
+    display: none;
+  }
+}
+
+@media (width < 280px) {
+  .wrapper__callback {
+    display: none;
+  }
+}
